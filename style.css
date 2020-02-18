@@ -1,0 +1,54 @@
+body {
+    background-color: #545454;
+}
+#head {
+    text-align: center;
+    color: white;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    background-color: darkgray;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 0;
+}
+
+nav a {
+    padding: 15px;
+    color: black;
+    margin-left: 5px;
+}
+
+#wrapper {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.whiteColor {
+    color: white;
+    font-style: oblique;
+    font-family: "Times New Roman", serif;
+}
+
+article {
+    padding: 10px;
+    margin-top: 10px;
+    background-color: black;
+}
+
+article p {
+    margin-left: 20px;
+}
+
+img {
+    width: 20%;
+}
+
+li {
+    margin-bottom: 20px;
+}
