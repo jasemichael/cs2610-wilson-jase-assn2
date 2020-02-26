@@ -1,18 +1,7 @@
-<!DOCTYPE html>
-<html lang="zxx">
-<head>
-    <title>Tips</title>
-    <link type="text/css" href="/style.css" rel="stylesheet">
-    <meta charset="utf-8"/>
-</head>
-<body>
-<h1 id="head">Tips</h1>
-<nav>
-    <a href="index.html">Blog</a>
-    <a href="about.html">About</a>
-    <a href="tips.html">Tips</a>
-</nav>
-<hr>
+{% extends 'blog/base.html' %}
+{% block title %}Tips{% endblock %}
+{% block h1 %}Tips{% endblock %}
+{% block content %}
 <div id="wrapper" class="whiteColor">
     <article>
         <h2>Bash Commands</h2>
@@ -94,5 +83,4 @@
         </ul>
     </article>
 </div>
-</body>
-</html>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang='zxx'>
+<head>
+	<meta charset="utf-8"/>
+	<title>{% block title %}{% endblock %}</title>
+	<link rel='stylesheet' type='text/css' href='{% static "blog/css/style.css" %}'>
+	<link rel="shortcut icon" href='{% static "blog/images/favicon.ico" %}' type="image/x-icon">
+</head>
+<body>
+<h1 id="head">{% block h1 %}{% endblock %}</h1>
+<nav>
+	<a href="/">Blog</a>
+	<a href="/about">About</a>
+	<a href="/tips">Tips</a>
+</nav>
+<hr>
+{% block content %}
+{% endblock %}
+</body>
+</html>

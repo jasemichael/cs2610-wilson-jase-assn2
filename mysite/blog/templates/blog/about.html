@@ -1,22 +1,12 @@
-<!DOCTYPE html>
-<html lang="zxx">
-<head>
-    <title>About</title>
-    <link type="text/css" href="/style.css" rel="stylesheet">
-    <meta charset="utf-8"/>
-</head>
-<body>
-<h1 id="head">About</h1>
-<nav>
-    <a href="index.html">Blog</a>
-    <a href="about.html">About</a>
-    <a href="tips.html">Tips</a>
-</nav>
-<hr>
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block title %}About{% endblock %}
+{% block h1 %}About{% endblock %}
+{% block content %}
 <div id="wrapper">
     <article class="whiteColor">
         <h2>Bio</h2>
-        <img src="lady.jpg" alt="The lady client">
+        <img src="{% static 'blog/images/lady.jpg' %}" alt="The lady client">
         <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -26,7 +16,7 @@
             cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
         <h2>Sports</h2>
-        <img src="dance.jpg" alt="Extreme sport">
+        <img src="{% static 'blog/images/dance.jpg' %}" alt="Extreme sport">
         <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -36,7 +26,7 @@
             cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
         <h2>Diet</h2>
-        <img src="food.jpg" alt="Exotic food">
+        <img src="{% static 'blog/images/food.jpg' %}" alt="Exotic food">
         <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -46,7 +36,7 @@
             cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
         <h2>Animals</h2>
-        <img src="dog.jpg" alt="Exotic pet">
+        <img src="{% static 'blog/images/dog.jpg' %}" alt="Exotic pet">
         <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -57,5 +47,4 @@
         </p>
     </article>
 </div>
-</body>
-</html>
+{% endblock %}
