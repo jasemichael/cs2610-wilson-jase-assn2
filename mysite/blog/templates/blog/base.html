@@ -10,9 +10,9 @@
 <body>
 <h1 id="head">{% block h1 %}{% endblock %}</h1>
 <nav>
-	<a href="/">Blog</a>
-	<a href="/about">About</a>
-	<a href="/tips">Tips</a>
+	<a href="{% url 'blog:index' %}">Blog</a>
+	<a href="{% url 'blog:about' %}">About</a>
+	<a href="{% url 'blog:tips' %}">Tips</a>
 </nav>
 <hr>
 {% block content %}
