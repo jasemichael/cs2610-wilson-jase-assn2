@@ -1,6 +1,14 @@
 {% extends 'blog/base.html' %}
-{% block title %}Home{% endblock %}
-{% block h1 %}Blog Home{% endblock %}
-{% block content %} 
-
+{% block title %}Archive{% endblock %}
+{% block h1 %}Archive{% endblock %}
+{% block content %}
+<div id="wrapper">
+	{% for blog in blogs %}
+		<article class="whiteColor">
+			<h2>{{ blog.title }}</h2>
+			<p>{{ blog.content|truncatewords:100}}</p>
+			<p>Number of Comments: {{ blog.comment_set.count }}</p>
+		</article>
+	{% endfor %}
+</div>
 {% endblock %}
