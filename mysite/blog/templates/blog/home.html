@@ -5,7 +5,7 @@
 <div id="wrapper">
 	{% for blog in blogs %}
 		<article class="whiteColor">
-			<h2>{{ blog.title }}</h2>
+			<a href='{% url "blog:entry" blog.id %}'><h2>{{ blog.title }}</h2></a>
 			<p>{{ blog.content|truncatewords:100}}</p>
 			<p>Number of Comments: {{ blog.comment_set.count }}</p>
 		</article>

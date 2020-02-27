@@ -52,3 +52,12 @@ img {
 li {
     margin-bottom: 20px;
 }
+
+form {
+	background-color: black;
+	padding: 20px 0 20px 0;
+}
+
+form > label, input, textarea {
+	margin-left: 30px;
+}

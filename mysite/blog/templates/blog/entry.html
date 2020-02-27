@@ -9,11 +9,22 @@
 </article>
 
 <h2 class='whiteColor'>Comments</h2>
-{% for comment in blog.comment_set.all %}
+{% for comment in comments %}
 	<article class='whiteColor'>
 		<h3>{{ comment.commenter }}</h3>
 		<p>{{ comment.content }}</h3>
 		<p>{{ comment.posted }}</p>
 	</article>
 {% endfor %}
+<h3 class='whiteColor'>Add comment</h3>
+<form class='whiteColor' method="POST" action="{% url 'blog:entry' blog.id %}">
+	{% csrf_token %}
+	<label for='author'>Name:</label><br>
+	<input type='text' name='author' id='author' size='30' required><br>
+	<label for='email'>Email:</label><br>
+	<input type='email' name='email' id='email' size='30' required><br>
+	<label for='content'>Comment:</label><br>
+	<textarea id='content' name='content' rows='6' cols='50' required></textarea><br>
+	<input type='submit' value='Submit'>
+</form>
 {% endblock %}
